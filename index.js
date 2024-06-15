@@ -16,3 +16,26 @@ function clickLike2(){
 
 btnLike1.addEventListener("click",clickLike1)
 btnLike2.addEventListener("click",clickLike2)
+
+function DisLikes1() {
+  let totalDisLikes1 = parseInt(countDisLikes1.value) + 1
+   countDisLikes1.textContent = totalDisLikes1.toString()
+}
+btnDisLike1.addEventListener("click",DisLikes1)
+
+function DisLikes2() {
+  let totalDisLikes2 = parseInt(countDisLikes2.value) + 1
+   countDisLikes2.textContent = totalDisLikes2.toString()
+}
+btnDisLike2.addEventListener("click",DisLikes2)
+
+const comment = document.getElementById("comment")
+const submit = document.getElementById("submit")
+const commentbox = document.getElementById("commentbox")
+
+function submitComment() {
+   commentbox.textContent += comment.value.toString() + "\n"
+    comment.value=""
+  
+}
+submit.addEventListener("click",submitComment)
